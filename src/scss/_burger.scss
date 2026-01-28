@@ -1,0 +1,175 @@
+/* Контейнер для бургер-кнопки */
+.burger-container {
+    position: relative;
+    z-index: 1001;
+}
+.wrapper-burger {
+    position: relative;
+}
+
+/* Бургер-кнопка - 32x32 с белыми линиями */
+.burger-desc, .burger {
+    width: 32px;
+    height: 32px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+    border: none;
+    z-index: 99;
+}
+
+.pic-logo {
+    margin-bottom: 30px;
+}
+
+.burger-desc span, .burger span {
+    display: block;
+    height: 2px;
+    width: 24px;
+    background-color: #fff; /* Белый цвет */
+    border-radius: 1px;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 4px; /* (32-24)/2 = 4px отступы */
+    z-index: 101;
+}
+
+.burger-desc span:nth-child(1), .burger span:nth-child(1)  {
+    top: 10px;
+}
+
+.burger-desc span:nth-child(2) {
+    top: 15px;
+}
+
+.burger-desc span:nth-child(3) {
+    top: 20px;
+}
+
+.burger {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.burger span{
+    background-color: #000;
+    z-index: 101;
+}
+
+/* Анимация бургера при открытии - поворот в крестик */
+.burger.active span:nth-child(1), .burger span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 15px;
+}
+
+.burger.active span:nth-child(2), .burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3), .burger span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 15px;
+}
+
+/* Выпадающее бургер-меню */
+.burger-dropdown {
+    position: absolute;
+    top: 20px; /* Выпадает от кнопки */
+    right: 0;
+    width: 370px;
+    background-color: #fff;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.burger-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-32px);
+}
+
+.burger-dropdown__content {
+    position: relative;
+    padding: 24px;
+}
+
+/* Навигация в выпадающем меню */
+.burger-dropdown__nav {
+    margin-bottom: 30px;
+}
+
+.burger-dropdown__nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.burger-dropdown__nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.burger-dropdown__nav li:last-child {
+    margin-bottom: 0;
+}
+
+.burger-dropdown__link {
+    max-width: fit-content;
+    color: #1B1A1A;
+    text-decoration: none;
+    position: relative;
+    font-family: 'Inter-reg';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0px;
+    border-bottom: 1px solid transparent;
+
+    transition: .3s ease;
+}
+
+.burger-dropdown__link:hover {
+    padding-bottom: 2px;
+    border-bottom: 1px solid #1B1A1A;
+}
+
+/* Оверлей для затемнения фона */
+.burger-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.burger-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Анимация при закрытии */
+.burger-dropdown.closing {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+}
+
+/* Прячем крестик закрытия (не нужен в этом варианте) */
+.burger-dropdown__close {
+    display: none;
+}

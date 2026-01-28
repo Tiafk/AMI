@@ -1,0 +1,110 @@
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #252424;
+    margin-top: 120px;
+
+    .block {
+        margin: 40px 0 29px;
+
+        .top-nav {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            p, li {
+                color: #fff;
+            }
+
+            .logo {
+                .sub-title {
+                    font-family: 'Inter-reg';
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 130%;
+                    letter-spacing: 0px;
+
+                    margin-top: 21px;
+                }
+            }
+
+            .nav-container {
+                display: flex;
+                width: 100%;
+                max-width: 580px;
+                justify-content: space-between;
+
+                .block-nav {
+                    &:first-child {
+                        margin-right: 20px;
+                    }
+                    .title-nav {
+                        font-family: 'Inter-semi';
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 130%;
+                        letter-spacing: 0px;
+
+                        margin-bottom: 12px;
+                    }
+                    ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                        .nav-item {
+                            cursor: pointer;
+                            font-family: 'Inter-reg';
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 130%;
+                            letter-spacing: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        .policy {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            border-top: 1px solid #909090;
+            padding: 20px 0 0;
+
+            p {
+                font-family: 'Inter-reg';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                letter-spacing: 0px;
+
+                color: #909090;
+            }
+
+            .policy-text {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+    }
+}
+
+@media (max-width:925px) {
+    .footer .block .top-nav {
+        flex-direction: column;
+    }
+    .footer .block .top-nav .nav-container {
+        padding-top: 30px;
+    }
+    .footer .block .top-nav .logo .sub-title {
+        display: none;
+    }
+    .footer .block .top-nav .logo {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #909090;
+    }
+}
