@@ -173,3 +173,10 @@
 .burger-dropdown__close {
     display: none;
 }
+
+@media (max-width:490px) {
+    .burger-dropdown {
+        width: 100vw;
+        right: -20px;
+    }
+} 

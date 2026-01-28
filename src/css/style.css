@@ -1083,6 +1083,12 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   display: none;
 }
 
+@media (max-width: 490px) {
+  .burger-dropdown {
+    width: 100vw;
+    right: -20px;
+  }
+}
 .mySwiper {
   width: 100%;
   padding: 20px 0 40px;
