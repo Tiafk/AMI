@@ -716,6 +716,19 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
        object-fit: cover;
   }
 }
+@media (max-width: 600px) {
+  .block5 .wrapper-text-block .text-block {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+  .block5 .wrapper-text-block .text-block .block {
+    max-width: none;
+  }
+  .block5 .wrapper-text-block .text-block .block .text {
+    max-width: none;
+  }
+}
 .contact {
   display: flex;
 }
