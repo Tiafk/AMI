@@ -665,13 +665,12 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
     max-height: none;
     transform: translateY(50px);
     transition: transform 0.3s ease, opacity 0.3s ease;
+    max-height: 80%;
+    overflow: auto;
   }
   .popup-overlay.active .popup {
     opacity: 1;
     transform: translateY(0);
-  }
-  .popup-content {
-    overflow: scroll;
   }
   .popup-image {
     max-height: 400px;
