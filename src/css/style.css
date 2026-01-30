@@ -755,6 +755,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 }
 .block5 .wrapper-text-block .text-block {
   display: flex;
+  gap: 20px;
 }
 .block5 .wrapper-text-block .text-block .block {
   display: flex;
@@ -763,6 +764,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   width: 100%;
   max-width: 373.5px;
   justify-content: space-between;
+  padding: 0;
   margin-top: 0;
 }
 .block5 .wrapper-text-block .text-block .block .sub-title {
