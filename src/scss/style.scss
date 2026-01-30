@@ -21,6 +21,11 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /* Для компенсации фиксированного хедера */
 section[id] {
     scroll-margin-top: 80px; /* Высота вашего хедера */
