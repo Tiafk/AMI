@@ -53,3 +53,8 @@
         bottom: clamp(50px, 10vw, 70px);
     }
 }
+@media (max-width:700px) {
+    .main-sec {
+        background-position: 30%;
+    }
+}

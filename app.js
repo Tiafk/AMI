@@ -87,8 +87,8 @@ window.addEventListener("scroll", () => {
         // Убираем класс через время для следующего цикла
         setTimeout(() => {
             header.classList.remove("scroll-stopped");
-        }, 300);
-    }, 100);
+        }, 0);
+    }, 0);
 });
 
 // Popup для "Подробнее"
@@ -97,50 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(initMarquee, 100);
     
     // Popup
-    // const detailButtons = document.querySelectorAll('.block__text.next');
-    // const popup = document.getElementById('popupOverlay');
-    // const popupClose = document.getElementById('popupClose');
-    // const popupImage = document.getElementById('popupImage');
-    // const popupTitle = document.getElementById('popupTitle');
-    // const popupDesc = document.getElementById('popupDescription');
-    
-    // const popupData = [
-    //     {
-    //         title: 'Альпина Паблишер х AMI CHAISE',
-    //         image: './src/img/col2.png',
-    //         description: 'С 12 ноября в ресторанах AMI CHAISE запускали спешл-меню, вдохновлённое серией книг о самоподдержке, внимании к себе и поиске внутреннего равновесия под названием «Дневники самотерапии».'
-    //     },
-    //     {
-    //         title: 'RESHAPE X ИЛЬ ДЕ БОТЭ Х AMI CHAISE',
-    //         image: './src/img/col3.png',
-    //         description: 'В декабре 2025 года предновогодний сезон в Ami Chaise открывала новая коллаборация сразу с пятью популярными брендами.<br><br>При заказе спешл-позиции каждому гостю дарили колбу от бренда текстильной канцелярии micielo studio с хлопковым изделием, в которой было спрятано пожелания на 2026 год, а также сюрпризы от брендов-партнёров: магазина косметики и парфюмерии ИЛЬ ДЕ БОТЭ, сети фитнес-студий Reshape, бренда сумок и аксессуаров Around the World и сети массажных салонов LITEBODY17'
-    //     }
-    // ];
-    
-    // detailButtons.forEach((button, index) => {
-    //     button.addEventListener('click', function() {
-    //         const data = popupData[index];
-    //         if (!data) return;
-            
-    //         popupImage.src = data.image;
-    //         popupImage.alt = data.title;
-    //         popupTitle.textContent = data.title;
-    //         popupDesc.innerHTML = data.description.replace(/<br>/g, '<br>');
-            
-    //         popup.classList.add('active');
-    //         document.body.style.overflow = 'hidden';
-    //     });
-    // });
-    
-    // function closePopup() {
-    //     popup.classList.remove('active');
-    //     document.body.style.overflow = '';
-    // }
-    
-    // popupClose.addEventListener('click', closePopup);
-    // popup.addEventListener('click', (e) => e.target === popup && closePopup());
-    // document.addEventListener('keydown', (e) => e.key === 'Escape' && popup.classList.contains('active') && closePopup());
-    
     const detailButtons = document.querySelectorAll('.block__text.next');
     const popup = document.getElementById('popupOverlay');
     const popupClose = document.getElementById('popupClose');
@@ -156,12 +112,12 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             title: 'Альпина Паблишер х AMI CHAISE',
-            image: './src/img/col2.png',
+            image: './src/img/popup1.png',
             description: 'С 12 ноября в ресторанах AMI CHAISE запускали спешл-меню, вдохновлённое серией книг о самоподдержке, внимании к себе и поиске внутреннего равновесия под названием «Дневники самотерапии».'
         },
         {
             title: 'RESHAPE X ИЛЬ ДЕ БОТЭ Х AMI CHAISE',
-            image: './src/img/col3.png',
+            image: './src/img/popup2.png',
             description: 'В декабре 2025 года предновогодний сезон в Ami Chaise открывала новая коллаборация сразу с пятью популярными брендами.<br><br>При заказе спешл-позиции каждому гостю дарили колбу от бренда текстильной канцелярии micielo studio с хлопковым изделием, в которой было спрятано пожелания на 2026 год, а также сюрпризы от брендов-партнёров: магазина косметики и парфюмерии ИЛЬ ДЕ БОТЭ, сети фитнес-студий Reshape, бренда сумок и аксессуаров Around the World и сети массажных салонов LITEBODY17'
         }
     ];
@@ -297,5 +253,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 spaceBetween: 25
             }
         },
+    });
+});
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            // Высота вашей навигации (подставьте актуальную)
+            const navHeight = 80;
+            const targetPosition = targetElement.offsetTop - navHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
     });
 });

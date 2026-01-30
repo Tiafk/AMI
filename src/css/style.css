@@ -45,13 +45,11 @@
     bottom: clamp(50px, 10vw, 70px);
   }
 }
-.header.scrolling {
-  background-color: #909090;
-  opacity: 0.7;
-  transition: 0.3s ease;
-  z-index: 100;
+@media (max-width: 700px) {
+  .main-sec {
+    background-position: 30%;
+  }
 }
-
 header.scroll-stopped, header.scrolled {
   opacity: 1;
   background-color: #252424;
@@ -951,6 +949,10 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   line-height: 130%;
   letter-spacing: 0px;
 }
+.footer .block .top-nav .nav-container .block-nav ul .nav-item a {
+  color: #fff;
+  text-decoration: none;
+}
 .footer .block .policy {
   display: flex;
   flex-direction: row;
@@ -981,6 +983,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   letter-spacing: 0px;
   color: #909090;
   text-align: end;
+  text-decoration: none;
 }
 
 @media (max-width: 1200px) {
@@ -1277,6 +1280,15 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Для компенсации фиксированного хедера */
+section[id] {
+  scroll-margin-top: 80px; /* Высота вашего хедера */
 }
 
 .block {

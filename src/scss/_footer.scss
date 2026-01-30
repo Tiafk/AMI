@@ -68,6 +68,11 @@
                             font-size: 18px;
                             line-height: 130%;
                             letter-spacing: 0px;
+
+                            a {
+                                color: #fff;
+                            text-decoration: none;
+                            }
                         }
                     }
                 }
@@ -107,6 +112,7 @@
                 letter-spacing: 0px;
                 color: #909090;
                 text-align: end;
+                text-decoration: none;
             }
         }
     }

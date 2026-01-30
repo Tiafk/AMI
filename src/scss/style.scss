@@ -17,6 +17,15 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Для компенсации фиксированного хедера */
+section[id] {
+    scroll-margin-top: 80px; /* Высота вашего хедера */
+}
+
 .block {
     box-sizing: border-box;
     padding: 0 20px;
