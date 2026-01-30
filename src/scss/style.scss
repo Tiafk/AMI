@@ -116,6 +116,36 @@ ul {
 
 @media (max-width:1200px) {
     .block {
-        margin-top: clamp(90px, 65vw,120px);
+        margin-top: clamp(90px, 20vw,120px);
+    }
+}
+
+@media (max-width:1047px) {
+    .block .grey-adapt br {
+        display: none;
+    }
+}
+
+@media (max-width:600px) {
+    .block h2 , .block2 .container .title-text, .block3 .text-container .text-block .top{
+        font-size: clamp(28px,6vw,40px) !important;
+    }
+    .block .grey-adapt {
+        font-size: clamp(21px,5vw,28px) !important;
+    }
+    .adapt-text {
+        font-size: clamp(15px,3vw,18px) !important;
+    }
+
+    .btn {
+        font-size: clamp(15px,3vw,18px);
+        max-width: 260px;
+        padding: 13.5px 0;
+    }
+    .adapt-mini-text{
+        font-size: clamp(13px, 3vw, 16px) !important;
+    }
+    .adapt-mini-text2{
+        font-size: clamp(13px, 3vw, 18px) !important;
     }
 }

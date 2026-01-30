@@ -21,6 +21,19 @@
             display: flex;
             flex-direction: column;
 
+            &:nth-child(2) {
+                .text-con:last-child {
+                    margin-top: 10px;
+                }
+            }
+
+            &:nth-child(4) {
+                .text-con {
+                    border-bottom: 1px solid #000;
+                    max-width: fit-content;
+                }
+            }
+
             .title-con {
                 font-family: 'Inter-semi';
                 font-weight: 600;
@@ -44,6 +57,7 @@
             .social {
                 display: flex;
                 gap: 12px;
+                margin-bottom: 10px;
                 .img-con {
                     cursor: pointer;
                     width: 100%;
@@ -77,14 +91,32 @@
     .block.contact {
         flex-direction: column-reverse;
         padding: 0;
+        display: grid;
+        grid-template-areas: 
+        'title'
+        'map'
+        'text';
+    }
+    .contact .text-block .contact-block:nth-child(4) .text-con {
+        border: none;
     }
     .contact .map-container {
         height: 250px;
+        grid-area: map;
     }
     .contact .title-top {
         display: block !important;
+        grid-area: title;
+        padding: 0 20px 20px;
     }
     .contact .text-block .title-top {
         display: none !important;
+    }
+    .contact .text-block {
+        grid-area: text;
+        padding: 20px 20px 0;
+        max-width: none;
+        box-sizing: border-box;
+        gap: 20px;
     }
 }

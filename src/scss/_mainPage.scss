@@ -49,4 +49,7 @@
     .main-sec .wrapper .text {
         gap: clamp(10px, 2vw, 30px);
     }
+    .main-sec .wrapper {
+        bottom: clamp(50px, 10vw, 70px);
+    }
 }

@@ -66,3 +66,10 @@
         align-self: center;
     }
 }
+
+@media (max-width:490px) {
+    .block3 .text-container .logo img {
+        width: 70px;
+        height: 70px;
+    }
+}

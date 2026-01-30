@@ -6,31 +6,36 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .popup-overlay.active {
-    display: flex;
+    visibility: visible;
     opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .popup {
+    margin: 0 20px;
     background-color: #fff;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     max-height: 660px;
     overflow: hidden;
     position: relative;
     transform: translateY(20px);
-    transition: transform 0.3s ease;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .popup-overlay.active .popup {
+    opacity: 1;
     transform: translateY(0);
 }
 
@@ -47,6 +52,7 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
+    background-color: transparent;
 }
 
 .popup-close:hover {
@@ -58,11 +64,11 @@
     flex-direction: column;
     height: 100%;
     justify-content: center;
-    align-items: center;
 
     .popup-text {
         display: flex;
         flex-direction: column;
+        align-self: center;
         #popupTitle {
             font-family: 'Inter-bold';
             font-weight: 700;
@@ -126,15 +132,32 @@
     white-space: normal;
 }
 
+@media (max-width:1150px) {
+    .popup-image {
+        min-width: auto;
+    }
+}
+
 /* Для мобильных */
 @media (max-width: 767px) {
-    .popup-text {
-        max-height: 50vh;
-        padding: 20px;
+    .popup {
+        margin: 0;
+        align-self: end;
+        max-height: none;
+        transform: translateY(50px);
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
-    
-    .popup-text h3 {
-        font-size: 20px;
-        margin-bottom: 15px;
+    .popup-overlay.active .popup {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .popup-content {
+        overflow: scroll;
+    }
+    .popup-image {
+        max-height: 400px;
+    }
+    .popup-text {
+        padding: 20px 20px 50px;
     }
 }
