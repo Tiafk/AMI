@@ -7,7 +7,7 @@ const phrases = [
     "Breakfast all day",
     "Be my ami",
     "Breakfast all day",
-    "Be my ami"
+    "Be my ami",
 ];
 
 function initMarquee() {
