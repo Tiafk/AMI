@@ -1,16 +1,34 @@
 .block2 {
-    .pic {
-        display: flex;
-        width: 100%;
+    .mySwiper-bithday {
         margin-bottom: 30px;
-        img {
-            object-fit: cover;
+        .swiper-wrapper .swiper-slide {
             width: 100%;
+            max-width: 580px;
+            display: flex;
+            align-self: center;
+            overflow: hidden;
+        }
+        .swiper-wrapper .swiper-slide .block {
+            padding: 0;
+            margin: 0;
+            max-height: clamp(409px, 50vw, 600px);
+        }
+        .swiper-wrapper .swiper-slide .block .pic {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+    
+            .mob {
+                display: none;
+            }
         }
 
-        .mob {
-            display: none;
-        }
     }
     .container {
         display: flex;
@@ -46,6 +64,18 @@
     }
 }
 
+@media (max-width:785px) {
+    .block2 .mySwiper-bithday .swiper-wrapper .swiper-slide .block .pic {
+        min-width: 279px;
+        max-width: clamp(279px, 45vw, 370px);
+    }
+    .block2 .mySwiper-bithday .swiper-wrapper .swiper-slide .block .pic img{
+
+        width: auto;
+    }
+}
+
+
 @media (max-width:705px) {
     .block2 .container {
         flex-direction: column;
@@ -62,9 +92,9 @@
     .block2 .pic .desc {
         display: none;
     }
-    .block2 .pic .mob {
+    .block2 .mySwiper-bithday .swiper-wrapper .swiper-slide .block .pic .mob {
         display: block;
-        width: 100%;
+        height: 100%;
         object-fit: cover;
         max-height: 500px;
     }

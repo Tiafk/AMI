@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    const swiper = new Swiper('.mySwiper', {
+    const swiper = new Swiper('.mySwiper-colab', {
         // Параметры по умолчанию
         slidesPerView: 'auto',
         spaceBetween: 25,
@@ -252,6 +252,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 slidesPerView: 3,
                 spaceBetween: 25
             }
+        },
+    });
+    
+    const swiper2 = new Swiper('.mySwiper-bithday', {
+        // Параметры по умолчанию
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        loop: false,
+
+        breakpoints: {
+            595: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
         },
     });
 });

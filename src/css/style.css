@@ -326,17 +326,34 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
     margin-top: 20px;
   }
 }
-.block2 .pic {
-  display: flex;
-  width: 100%;
+.block2 .mySwiper-bithday {
   margin-bottom: 30px;
 }
-.block2 .pic img {
+.block2 .mySwiper-bithday .swiper-wrapper .swiper-slide {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  align-self: center;
+  overflow: hidden;
+}
+.block2 .mySwiper-bithday .swiper-wrapper .swiper-slide .block {
+  padding: 0;
+  margin: 0;
+  max-height: clamp(409px, 50vw, 600px);
+}
+.block2 .mySwiper-bithday .swiper-wrapper .swiper-slide .block .pic {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.block2 .mySwiper-bithday .swiper-wrapper .swiper-slide .block .pic img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  height: 100%;
 }
-.block2 .pic .mob {
+.block2 .mySwiper-bithday .swiper-wrapper .swiper-slide .block .pic .mob {
   display: none;
 }
 .block2 .container {
@@ -370,6 +387,15 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   margin-bottom: 30px;
 }
 
+@media (max-width: 785px) {
+  .block2 .mySwiper-bithday .swiper-wrapper .swiper-slide .block .pic {
+    min-width: 279px;
+    max-width: clamp(279px, 45vw, 370px);
+  }
+  .block2 .mySwiper-bithday .swiper-wrapper .swiper-slide .block .pic img {
+    width: auto;
+  }
+}
 @media (max-width: 705px) {
   .block2 .container {
     flex-direction: column;
@@ -385,9 +411,9 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   .block2 .pic .desc {
     display: none;
   }
-  .block2 .pic .mob {
+  .block2 .mySwiper-bithday .swiper-wrapper .swiper-slide .block .pic .mob {
     display: block;
-    width: 100%;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     max-height: 500px;
@@ -404,6 +430,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   width: 100%;
   max-width: none;
   justify-content: center;
+  overflow: hidden;
 }
 .block3 .bacground-ap {
   position: absolute;
@@ -413,6 +440,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   left: 0;
   top: 0;
   z-index: 5;
+  margin-top: 120px;
 }
 .block3 .wrapper-con {
   z-index: 100;
@@ -480,10 +508,14 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   .block3 .wrapper-con {
     flex-direction: column;
     align-items: start;
+    margin-top: clamp(90px, 20vw, 120px);
   }
   .block3 .pic {
     width: 100%;
     align-self: center;
+  }
+  .block3 .text-container {
+    margin-top: 90px;
   }
 }
 @media (max-width: 490px) {
