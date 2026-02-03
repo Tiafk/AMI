@@ -808,6 +808,12 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
     max-height: 412px;
   }
 }
+@media (max-width: 361px) {
+  .popup-special .popup .popup-content .popup-image img {
+    width: auto;
+    height: 100%;
+  }
+}
 .block5 {
   display: flex;
   flex-direction: row;
