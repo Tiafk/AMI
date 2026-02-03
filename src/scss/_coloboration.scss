@@ -29,6 +29,8 @@
             .pic {
                 display: flex;
                 width: 100%;
+                height: 460px;
+                max-height: 460px;
                 img {
                     width: 100%;
                     object-fit: cover;
@@ -95,6 +97,13 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width:1200px) {
+    .block4 .collection .block .pic, .block4 .mySwiper .swiper-wrapper .swiper-slide .block .pic {
+        height: clamp(320px,40vw,460px);
+        max-height: clamp(320px,40vw,460px);
     }
 }
 
