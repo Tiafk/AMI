@@ -1339,8 +1339,16 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   padding: 20px 0 40px;
 }
 
+.swiper {
+  overflow: visible !important;
+}
+
 .swiper-slide {
   height: auto;
+}
+
+.block2, .block4 {
+  overflow: hidden;
 }
 
 /* Стили для навигации и пагинации */
