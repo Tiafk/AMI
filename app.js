@@ -112,13 +112,14 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             title: 'Альпина Паблишер х AMI CHAISE',
-            image: './src/img/popup1.png',
+            image: './src/img/popup1(1).png',
             description: 'С 12 ноября в ресторанах AMI CHAISE запускали спешл-меню, вдохновлённое серией книг о самоподдержке, внимании к себе и поиске внутреннего равновесия под названием «Дневники самотерапии».'
         },
         {
             title: 'RESHAPE X ИЛЬ ДЕ БОТЭ Х AMI CHAISE',
             image: './src/img/popup2.png',
-            description: 'В декабре 2025 года предновогодний сезон в Ami Chaise открывала новая коллаборация сразу с пятью популярными брендами.<br><br>При заказе спешл-позиции каждому гостю дарили колбу от бренда текстильной канцелярии micielo studio с хлопковым изделием, в которой было спрятано пожелания на 2026 год, а также сюрпризы от брендов-партнёров: магазина косметики и парфюмерии ИЛЬ ДЕ БОТЭ, сети фитнес-студий Reshape, бренда сумок и аксессуаров Around the World и сети массажных салонов LITEBODY17'
+            description: 'В декабре 2025 года предновогодний сезон в Ami Chaise открывала новая коллаборация сразу с пятью популярными брендами.<br><br>При заказе спешл-позиции каждому гостю дарили колбу от бренда текстильной канцелярии micielo studio с хлопковым изделием, в которой было спрятано пожелания на 2026 год, а также сюрпризы от брендов-партнёров: магазина косметики и парфюмерии ИЛЬ ДЕ БОТЭ, сети фитнес-студий Reshape, бренда сумок и аксессуаров Around the World и сети массажных салонов LITEBODY17',
+            specialClass: true
         }
     ];
     
@@ -137,6 +138,13 @@ document.addEventListener('DOMContentLoaded', function() {
             popupImage.alt = data.title;
             popupTitle.textContent = data.title;
             popupDesc.innerHTML = data.description;
+
+            // Добавляем или удаляем специальный класс
+            if (data.specialClass) {
+                popup.classList.add('popup-special');
+            } else {
+                popup.classList.remove('popup-special');
+            }
             
             popup.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -149,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function closePopup() {
-        popup.classList.remove('active');
+        popup.classList.remove('active','popup-special');
         document.body.style.overflow = '';
         
         // При закрытии попапа возобновляем автопрокрутку Swiper (если была)
