@@ -6,6 +6,7 @@
   width: 100%;
   min-width: 100%;
   height: calc(100vh - 70px);
+  height: calc(100svh - 70px);
   min-height: 600px;
   z-index: 1;
   overflow: hidden;
@@ -59,11 +60,13 @@
 @media (max-width: 1160px) {
   .main-sec {
     height: calc(100vh - 6vw);
+    height: calc(100svh - 6vw);
   }
 }
 @media (max-width: 1160px) {
   .main-sec {
     height: calc(100vh - 50.5px);
+    height: calc(100svh - 50.5px);
   }
 }
 @media (min-width: 1200px) {
