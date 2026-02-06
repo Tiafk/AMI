@@ -77,15 +77,15 @@
 
 @media (min-width:1200px) {
     .main-sec .bg-img img{
-        width: 100%;
+        // width: 100%;
         height: 100%;
     }
 }
 
-@media (max-width:585px) {
+@media (max-width:840px) {
     .main-sec .bg-img {
         display: flex;
-        transform: translateX(53%);
+        // transform: translateX(53%);
         justify-content: center;
     }
 }
@@ -108,8 +108,22 @@
         bottom: clamp(50px, 10vw, 70px);
     }
 }
+
+@media (max-width:768px) {
+    .main-sec {
+        height: 710px;
+        width: 100%;
+    }
+}
+
 @media (max-width:700px) {
     .main-sec {
         background-position: 30%;
+    }
+}
+
+@media (max-width:660px) {
+    .main-sec .bg-img {
+        transform: translateX(53%);
     }
 }
