@@ -11,6 +11,7 @@
 @import './footer';
 @import './burger';
 @import './swiper';
+@import './imgBlock';
 
 *{
     margin: 0;
@@ -58,7 +59,7 @@ ul {
 }
 
 .text1 {
-    font-family: "Inter-reg";
+    font-family: "Montserrat-reg";
 
     font-weight: 400;
     font-size: 18px;
@@ -68,7 +69,7 @@ ul {
 }
 
 .title {
-    font-family: "Inter-semi";
+    font-family: "Montserrat-semi";
 
     font-weight: 500;
     font-size: 72px;
@@ -87,7 +88,7 @@ ul {
     background-color: #1B1A1A;
     border: 1px solid transparent;
     color: #fff;
-    font-family: 'Inter-semi';
+    font-family: 'Montserrat-semi';
     font-weight: 600;
     font-size: 18px;
     line-height: 140%;
@@ -104,32 +105,32 @@ ul {
 }
 
 @font-face {
-    font-family: 'Inter-reg';
-    src: url('../fonts/Inter_18pt-Regular.ttf');
+    font-family: 'Montserrat-reg';
+    src: url('../fonts/Montserrat-Regular.ttf');
     font-weight: 400;
     font-style: normal;
 }
 @font-face {
-    font-family: 'Inter-bold';
-    src: url('../fonts/Inter_18pt-Bold.ttf');
+    font-family: 'Montserrat-bold';
+    src: url('../fonts/Montserrat-Bold.ttf');
     font-weight: 700;
     font-style: bold;
 }
 @font-face {
-    font-family: 'Inter-semi';
-    src: url('../fonts/Inter_18pt-SemiBold.ttf');
+    font-family: 'Montserrat-semi';
+    src: url('../fonts/Montserrat-SemiBold.ttf');
     font-weight: 500;
     font-style: Medium;
 }
 @font-face {
-    font-family: 'Inter-light';
-    src: url('../fonts/Inter_18pt-Light.ttf');
+    font-family: 'Montserrat-light';
+    src: url('../fonts/Montserrat-Light.ttf');
     font-weight: 300;
     font-style: normal;
 }
 
 @media (max-width:1200px) {
-    .block {
+    .block,.img-block {
         margin-top: clamp(90px, 20vw,120px);
     }
 }

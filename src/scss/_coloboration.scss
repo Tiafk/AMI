@@ -3,7 +3,7 @@
     flex-direction: column;
 
     h2 {
-        font-family: 'Inter-semi';
+        font-family: 'Montserrat-semi';
         font-weight: 600;
         font-size: 40px;
         line-height: 110.00000000000001%;
@@ -42,7 +42,7 @@
                 width: 100%;
 
                 .block__title {
-                    font-family: 'Inter-bold';
+                    font-family: 'Montserrat-bold';
                     font-weight: 700;
                     font-size: 25px;
                     line-height: 120%;
@@ -52,13 +52,12 @@
                     color: #909090;
                 }
                 .block__text {
-                    font-family: 'Inter-reg';
+                    font-family: 'Montserrat-reg';
                     font-weight: 400;
                     font-size: 18px;
                     line-height: 130%;
                     letter-spacing: 0px;
-
-                    margin-bottom: 10px;
+                    
                     color: #282828;
                 }
 
@@ -77,23 +76,25 @@
                     cursor: pointer;
                     display: flex;
                     align-self: start;
-                    padding-bottom: 2px;
-                    border-bottom: 1px solid #909090;
                     transition: .3s ease;
 
-                    font-family: 'Inter-reg';
+                    font-family: 'Montserrat-reg';
                     font-weight: 400;
                     font-size: 18px;
                     line-height: 140%;
                     letter-spacing: 0px;
 
+                    background-color: transparent;
+                    border: 1px solid #252324;
+                    padding: 12px 24px;
+                    margin-top: 10px;
 
-                    &:hover {
-                        font-family: 'Inter-semi';
-                        font-weight: 500;
-                        border-bottom: 1px solid #000;
-                        transition: .3s ease;
-                    }
+                    // &:hover {
+                    //     font-family: 'Montserrat-semi';
+                    //     font-weight: 500;
+                    //     border-bottom: 1px solid #000;
+                    //     transition: .3s ease;
+                    // }
                 }
             }
         }
@@ -110,6 +111,9 @@
 @media (max-width:870px) {
     .block4 .collection .block {
         min-width: 260px;
+    }
+    .block4 .collection .block .text-block .next, .block4 .mySwiper .swiper-wrapper .swiper-slide .block .text-block .next {
+        padding: clamp(8px, 2vw, 12px) 24px;
     }
 }
 

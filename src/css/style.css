@@ -36,6 +36,27 @@
 .main-sec .wrapper .text p {
   max-width: 373px;
 }
+.main-sec .wrapper .text .btn-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+.main-sec .wrapper .text .btn-container .btn-item {
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Montserrat-semi";
+  font-weight: 600;
+  background-color: transparent;
+  border: 1px solid #fff;
+  width: 100%;
+  max-width: 270px;
+  padding: 16.5px 10px;
+}
+.main-sec .wrapper .text .btn-container .btn-item:nth-child(1) {
+  background-color: #fff;
+  color: #252324;
+}
 
 @media (max-width: 1920px) {
   .main-sec .bg-img {
@@ -80,6 +101,11 @@
     justify-content: center;
   }
 }
+@media (max-width: 790px) {
+  .main-sec .wrapper .text .btn-container {
+    margin-top: 20px;
+  }
+}
 @media (max-width: 1500px) {
   .main-sec .text .title {
     font-size: clamp(40px, 5vw, 72px);
@@ -93,10 +119,14 @@
   .main-sec .wrapper {
     bottom: clamp(50px, 10vw, 70px);
   }
+  .main-sec .wrapper .text .btn-container .btn-item {
+    font-size: clamp(15px, 2vw, 18px);
+    padding: clamp(13.5px, 2vw, 16.5px) 0;
+  }
 }
 @media (max-width: 768px) {
   .main-sec {
-    height: 710px;
+    height: clamp(620px, 20vw, 710px);
     width: 100%;
   }
 }
@@ -105,7 +135,18 @@
     background-position: 30%;
   }
 }
-@media (max-width: 660px) {
+@media (max-width: 630px) {
+  .main-sec .wrapper .text .btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .main-sec .wrapper .text .btn-container .btn-item:nth-child(1) {
+    grid-column: span 2;
+    width: 100%;
+    max-width: none;
+  }
+}
+@media (max-width: 608px) {
   .main-sec .bg-img {
     transform: translateX(53%);
   }
@@ -199,7 +240,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   align-items: center;
   white-space: nowrap;
   margin-right: 25px;
-  font-family: "Inter-semi";
+  font-family: "Montserrat-semi";
   font-weight: 600;
   font-size: 24px;
   line-height: 140%;
@@ -238,7 +279,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   flex-direction: column;
 }
 .block1 h2 {
-  font-family: "Inter-semi";
+  font-family: "Montserrat-semi";
   font-weight: 600;
   font-size: 40px;
   line-height: 110%;
@@ -281,7 +322,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 }
 .block1 .location .wrapper-loc-text .text-block .opacity-title {
   color: #909090;
-  font-family: "Inter-bold";
+  font-family: "Montserrat-bold";
   font-weight: 700;
   font-size: 25px;
   line-height: 120%;
@@ -289,7 +330,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   margin-bottom: 10px;
 }
 .block1 .location .wrapper-loc-text .text-block .text {
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
@@ -298,28 +339,19 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 }
 .block1 .location .wrapper-loc-text .nav {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .block1 .location .wrapper-loc-text .nav .list-item {
   cursor: pointer;
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
-  letter-spacing: 0px;
-  color: #1B1A1A;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #909090;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  transition: 0.3s ease;
-}
-.block1 .location .wrapper-loc-text .nav .list-item:hover {
-  font-family: "Inter-semi";
-  font-weight: 500;
-  border-bottom: 1px solid #000;
-  transition: 0.3s ease;
+  color: #000200;
+  background-color: transparent;
+  border: 1px solid #252324;
+  padding: 12px 24px;
 }
 
 @media (max-width: 845px) {
@@ -336,6 +368,24 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   .block1 .location .wrapper-loc-text {
     margin: 0;
     margin-top: 20px;
+  }
+  .block1 .location:last-child .wrapper-loc-text {
+    margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .block1 .location .wrapper-loc-text .nav .list-item .table-text {
+    display: none;
+  }
+}
+@media (max-width: 545px) {
+  .block1 .location .wrapper-loc-text .nav .list-item {
+    width: 100%;
+    max-width: 170px;
+    min-width: 170px;
+    box-sizing: border-box;
+    padding: clamp(8px, 2vw, 12px) 0;
+    text-align: center;
   }
 }
 .block2 .mySwiper-bithday {
@@ -374,7 +424,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 }
 .block2 .container .title-text {
   max-width: 475px;
-  font-family: "Inter-bold";
+  font-family: "Montserrat-bold";
   font-weight: 600;
   font-size: 40px;
   line-height: 110%;
@@ -390,7 +440,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 }
 .block2 .container .container-block .text {
   max-width: 450px;
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
@@ -484,7 +534,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   flex-direction: column;
 }
 .block3 .text-container .text-block .top {
-  font-family: "Inter-bold";
+  font-family: "Montserrat-bold";
   font-weight: 600;
   font-size: 40px;
   line-height: 110%;
@@ -496,7 +546,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   display: flex;
   width: 100%;
   max-width: 440px;
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
@@ -541,7 +591,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   flex-direction: column;
 }
 .block4 h2 {
-  font-family: "Inter-semi";
+  font-family: "Montserrat-semi";
   font-weight: 600;
   font-size: 40px;
   line-height: 110%;
@@ -580,7 +630,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   width: 100%;
 }
 .block4 .collection .block .text-block .block__title, .block4 .mySwiper .swiper-wrapper .swiper-slide .block .text-block .block__title {
-  font-family: "Inter-bold";
+  font-family: "Montserrat-bold";
   font-weight: 700;
   font-size: 25px;
   line-height: 120%;
@@ -589,12 +639,11 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   color: #909090;
 }
 .block4 .collection .block .text-block .block__text, .block4 .mySwiper .swiper-wrapper .swiper-slide .block .text-block .block__text {
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
   letter-spacing: 0px;
-  margin-bottom: 10px;
   color: #282828;
 }
 .block4 .collection .block .text-block .block__text.hidden, .block4 .mySwiper .swiper-wrapper .swiper-slide .block .text-block .block__text.hidden {
@@ -610,20 +659,16 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   cursor: pointer;
   display: flex;
   align-self: start;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #909090;
   transition: 0.3s ease;
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
   letter-spacing: 0px;
-}
-.block4 .collection .block .text-block .next:hover, .block4 .mySwiper .swiper-wrapper .swiper-slide .block .text-block .next:hover {
-  font-family: "Inter-semi";
-  font-weight: 500;
-  border-bottom: 1px solid #000;
-  transition: 0.3s ease;
+  background-color: transparent;
+  border: 1px solid #252324;
+  padding: 12px 24px;
+  margin-top: 10px;
 }
 
 @media (max-width: 1200px) {
@@ -635,6 +680,9 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 @media (max-width: 870px) {
   .block4 .collection .block {
     min-width: 260px;
+  }
+  .block4 .collection .block .text-block .next, .block4 .mySwiper .swiper-wrapper .swiper-slide .block .text-block .next {
+    padding: clamp(8px, 2vw, 12px) 24px;
   }
 }
 @media (max-width: 590px) {
@@ -719,7 +767,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   align-self: center;
 }
 .popup-content .popup-text #popupTitle {
-  font-family: "Inter-bold";
+  font-family: "Montserrat-bold";
   font-weight: 700;
   font-size: 25px;
   line-height: 120%;
@@ -728,7 +776,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   margin-bottom: 10px;
 }
 .popup-content .popup-text #popupDescription {
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
@@ -835,7 +883,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 }
 .block5 h2 {
   grid-area: title;
-  font-family: "Inter-semi";
+  font-family: "Montserrat-semi";
   font-weight: 600;
   font-size: 40px;
   line-height: 110%;
@@ -864,7 +912,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   margin-top: 0;
 }
 .block5 .wrapper-text-block .text-block .block .sub-title {
-  font-family: "Inter-bold";
+  font-family: "Montserrat-bold";
   font-weight: 700;
   font-size: 25px;
   line-height: 120%;
@@ -874,7 +922,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 .block5 .wrapper-text-block .text-block .block .text {
   width: 100%;
   max-width: 270px;
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
@@ -933,7 +981,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   display: flex;
 }
 .contact .title-top {
-  font-family: "Inter-semi";
+  font-family: "Montserrat-semi";
   font-weight: 600;
   font-size: 40px;
   line-height: 110%;
@@ -960,7 +1008,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   max-width: fit-content;
 }
 .contact .text-block .contact-block .title-con {
-  font-family: "Inter-semi";
+  font-family: "Montserrat-semi";
   font-weight: 600;
   font-size: 18px;
   line-height: 130%;
@@ -969,7 +1017,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   margin-bottom: 10px;
 }
 .contact .text-block .contact-block .text-con {
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
@@ -992,7 +1040,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
      object-fit: cover;
 }
 .contact .text-block .contact-block .descript {
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
@@ -1049,7 +1097,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   margin-top: 120px;
 }
 .footer .sub-title {
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
@@ -1085,7 +1133,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   margin-right: 20px;
 }
 .footer .block .top-nav .nav-container .block-nav .title-nav {
-  font-family: "Inter-semi";
+  font-family: "Montserrat-semi";
   font-weight: 600;
   font-size: 18px;
   line-height: 130%;
@@ -1099,7 +1147,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 }
 .footer .block .top-nav .nav-container .block-nav ul .nav-item {
   cursor: pointer;
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
@@ -1124,7 +1172,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
 }
 .footer .block .policy .policy-text a {
   text-decoration: none;
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
@@ -1132,7 +1180,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   color: #909090;
 }
 .footer .block .policy .partner {
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
@@ -1315,7 +1363,7 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
   color: #1B1A1A;
   text-decoration: none;
   position: relative;
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
@@ -1441,6 +1489,54 @@ header.scroll-stopped .wrapper, header.scrolled .wrapper {
     width: 260px; /* Фиксированная ширина каждого блока */
   }
 }
+.img-block {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: grid;
+  width: 100%;
+  max-width: 840px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  margin-top: 120px;
+  padding: 0 20px;
+  gap: 40px;
+}
+.img-block .content-img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  box-sizing: contain;
+  overflow: hidden;
+}
+.img-block .content-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 880px) {
+  .img-block {
+    box-sizing: border-box;
+    gap: clamp(15px, 5vw, 40px);
+  }
+  .img-block .content-img {
+    max-height: clamp(176px, 43vw, 400px);
+    min-width: 170px;
+    min-height: 176px;
+  }
+}
+@media (max-width: 401px) {
+  .img-block .content-img {
+    min-width: auto;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -1487,7 +1583,7 @@ ul {
 }
 
 .text1 {
-  font-family: "Inter-reg";
+  font-family: "Montserrat-reg";
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
@@ -1496,7 +1592,7 @@ ul {
 }
 
 .title {
-  font-family: "Inter-semi";
+  font-family: "Montserrat-semi";
   font-weight: 500;
   font-size: 72px;
   line-height: 100%;
@@ -1514,7 +1610,7 @@ ul {
   background-color: #1B1A1A;
   border: 1px solid transparent;
   color: #fff;
-  font-family: "Inter-semi";
+  font-family: "Montserrat-semi";
   font-weight: 600;
   font-size: 18px;
   line-height: 140%;
@@ -1530,31 +1626,31 @@ ul {
 }
 
 @font-face {
-  font-family: "Inter-reg";
-  src: url("../fonts/Inter_18pt-Regular.ttf");
+  font-family: "Montserrat-reg";
+  src: url("../fonts/Montserrat-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Inter-bold";
-  src: url("../fonts/Inter_18pt-Bold.ttf");
+  font-family: "Montserrat-bold";
+  src: url("../fonts/Montserrat-Bold.ttf");
   font-weight: 700;
   font-style: bold;
 }
 @font-face {
-  font-family: "Inter-semi";
-  src: url("../fonts/Inter_18pt-SemiBold.ttf");
+  font-family: "Montserrat-semi";
+  src: url("../fonts/Montserrat-SemiBold.ttf");
   font-weight: 500;
   font-style: Medium;
 }
 @font-face {
-  font-family: "Inter-light";
-  src: url("../fonts/Inter_18pt-Light.ttf");
+  font-family: "Montserrat-light";
+  src: url("../fonts/Montserrat-Light.ttf");
   font-weight: 300;
   font-style: normal;
 }
 @media (max-width: 1200px) {
-  .block {
+  .block, .img-block {
     margin-top: clamp(90px, 20vw, 120px);
   }
 }
