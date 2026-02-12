@@ -56,6 +56,12 @@
 .main-sec .wrapper .text .btn-container .btn-item:nth-child(1) {
   background-color: #fff;
   color: #252324;
+  transition: 0.3s ease;
+}
+.main-sec .wrapper .text .btn-container .btn-item:nth-child(1):hover {
+  background-color: transparent;
+  color: #fff;
+  transition: 0.3s ease;
 }
 
 @media (max-width: 1920px) {

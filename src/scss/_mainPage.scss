@@ -56,6 +56,13 @@
                 .btn-item:nth-child(1) {
                     background-color: #fff;
                     color: #252324;
+                    transition: .3s ease;
+
+                    &:hover {
+                        background-color: transparent;
+                        color: #fff;
+                        transition: .3s ease;
+                    }
                 }
             }
         }
