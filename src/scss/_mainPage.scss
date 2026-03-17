@@ -106,6 +106,10 @@
                 display: flex;
                 width: 100%;
                 gap: 20px;
+                .btn_link {
+                    width: 100%;
+                    max-width: 270px;
+                }
                 .btn-item {
                     cursor: pointer;
                     color: #fff;

@@ -98,6 +98,10 @@
   width: 100%;
   gap: 20px;
 }
+.main-sec .wrapper .text .btn-container .btn_link {
+  width: 100%;
+  max-width: 270px;
+}
 .main-sec .wrapper .text .btn-container .btn-item {
   cursor: pointer;
   color: #fff;
