@@ -1,0 +1,163 @@
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #252424;
+    margin-top: 120px;
+
+    .sub-title {
+        font-family: 'Montserrat-reg';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0px;
+        color: #fff;
+
+        margin-top: 21px;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .block {
+        margin: 40px 0 29px;
+
+        .top-nav {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            p, li {
+                color: #fff;
+            }
+
+            .nav-container {
+                display: flex;
+                width: 100%;
+                max-width: 580px;
+                justify-content: space-between;
+
+                .mobile {
+                    display: none;
+                }
+
+                .block-nav {
+                    &:first-child {
+                        margin-right: 20px;
+                    }
+                    .title-nav {
+                        font-family: 'Montserrat-semi';
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 130%;
+                        letter-spacing: 0px;
+
+                        margin-bottom: 12px;
+                    }
+                    ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+
+                        .nav-item {
+                            cursor: pointer;
+                            font-family: 'Montserrat-reg';
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 130%;
+                            letter-spacing: 0px;
+
+                            a {
+                                color: #fff;
+                            text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .policy {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            border-top: 1px solid #909090;
+            padding: 20px 0 0;
+
+            
+            .policy-text {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+
+                a {
+                    text-decoration: none;
+                    font-family: 'Montserrat-reg';
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    letter-spacing: 0px;
+    
+                    color: #909090;
+                }
+            }
+
+            .partner {
+                font-family: 'Montserrat-reg';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 130%;
+                letter-spacing: 0px;
+                color: #909090;
+                text-align: end;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .footer {
+        margin-top: clamp(90px, 20vw,120px);
+    }
+}
+
+@media (max-width:925px) {
+    .footer .block .top-nav {
+        flex-direction: column;
+    }
+    .footer .block .top-nav .nav-container {
+        max-width: none;
+        padding-top: 30px;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: nowrap;
+    }
+    .footer .block .top-nav .logo .sub-title {
+        display: none;
+    }
+    .footer .block .top-nav .logo {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #909090;
+    }
+    .footer .block .top-nav .nav-container .mobile, .footer .mobile {
+        display: block;
+    }
+    .footer .mobile {
+        margin: 0;
+    }
+    .footer .block .policy .policy-text {
+        display: none;
+    }
+    .footer .block .policy {
+        padding: 30px 0 0;
+    }
+}
+
+@media (max-width:695px) {
+    .footer .block .top-nav .nav-container {
+        flex-wrap: wrap;
+    }
+}
