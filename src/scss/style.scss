@@ -14,10 +14,6 @@
 @import './imgBlock';
 @import './popupReservBtn';
 
-@import './about/mainPage';
-@import './about/colorBlock';
-@import './about/swiperAbout';
-
 *{
     margin: 0;
     padding: 0;
@@ -108,13 +104,6 @@ ul {
         color: #1B1A1A;
         transition: .3s ease;
     }
-}
-
-@font-face {
-    font-family: 'about-cursive';
-    src: url('../fonts/KalissaRegular_0.otf'),url('../fonts/KalissaSwashes_0.otf');
-    font-weight: 700;
-    font-style: normal;
 }
 
 @font-face {
