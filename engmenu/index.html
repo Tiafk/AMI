@@ -4,9 +4,26 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>English Menu</title>
-        <meta http-equiv="refresh" content="0; url=/src/engmenu.pdf" />
+
+        <!-- <meta http-equiv="refresh" content="0; url=/src/engmenu.pdf" /> -->
+        <!-- window.location.replace("/src/engmenu.pdf"); -->
+
         <script>
-            window.location.replace("/src/engmenu.pdf");
+             // Определяем окружение и строим правильный путь
+            let pdfPath = '/src/engmenu.pdf';
+            
+            // Проверяем, не в локальном ли мы сервере (VS Code)
+            if (window.location.hostname !== 'localhost' && 
+                window.location.hostname !== '127.0.0.1') {
+                // Это GitHub Pages - добавляем имя репозитория
+                const pathParts = window.location.pathname.split('/');
+                const repoName = pathParts[1]; // имя репозитория
+                if (repoName) {
+                    pdfPath = '/' + repoName + '/src/engmenu.pdf';
+                }
+            }
+            
+            window.location.replace(pdfPath);
         </script>
     </head>
     <body>
