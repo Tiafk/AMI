@@ -9,21 +9,13 @@
         <!-- window.location.replace("/src/engmenu.pdf"); -->
 
         <script>
-             // Определяем окружение и строим правильный путь
-            let pdfPath = '/src/engmenu.pdf';
+             // Просто используем относительный путь от текущей страницы
+            var currentPath = window.location.pathname;
+            var basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+            var pdfUrl = basePath + 'src/engmenu.pdf';
             
-            // Проверяем, не в локальном ли мы сервере (VS Code)
-            if (window.location.hostname !== 'localhost' && 
-                window.location.hostname !== '127.0.0.1') {
-                // Это GitHub Pages - добавляем имя репозитория
-                const pathParts = window.location.pathname.split('/');
-                const repoName = pathParts[1]; // имя репозитория
-                if (repoName) {
-                    pdfPath = '/' + repoName + '/src/engmenu.pdf';
-                }
-            }
-            
-            window.location.replace(pdfPath);
+            console.log('Redirecting to:', pdfUrl);
+            window.location.replace(pdfUrl);
         </script>
     </head>
     <body>
