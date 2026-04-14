@@ -5,17 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>English Menu</title>
 
-        <!-- <meta http-equiv="refresh" content="0; url=/src/engmenu.pdf" /> -->
-        <!-- window.location.replace("/src/engmenu.pdf"); -->
-
+        <meta http-equiv="refresh" content="0; url=/src/engmenu.pdf" />
+        
         <script>
-             // Просто используем относительный путь от текущей страницы
-            var currentPath = window.location.pathname;
-            var basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
-            var pdfUrl = basePath + 'src/engmenu.pdf';
-            
-            console.log('Redirecting to:', pdfUrl);
-            window.location.replace(pdfUrl);
+            window.location.replace("/src/engmenu.pdf");
         </script>
     </head>
     <body>
