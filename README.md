@@ -40,7 +40,7 @@ AMI/
 ├── app.js              # Основной файл с JavaScript логикой
 ├── index.html          # Главная страница лендинга
 └── preview.JPG         # Превью проекта для GitHub
-
+```
 
 ## 📞 Связаться со мной
 
@@ -49,10 +49,9 @@ AMI/
 - **Telegram**: [@Tiafkk](https://t.me/Tiafkk)
 - **GitHub**: [github.com/Tiafk](https://github.com/Tiafk)
 
-## 👥 Авторы
+## 👥 Автор
 
 - **Ruslan (Tiafk)** — основная разработка, адаптивная вёрстка, оптимизация и модульная организация SCSS/CSS кода.
-- **Timur (FLW7)** — участие в разработке.
 
 ## ⚖️ Лицензия
 
